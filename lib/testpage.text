@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:editable/editable.dart';
+
+class ListStudent extends StatelessWidget {
+  const ListStudent({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('List des etudiant'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Retourne à l`\'accueil!!'),
+        ) 
+        ),
+    );
+  }
+}
+Widget list(){
+  return ListView(
+    children: const <Widget>[
+      ListTile(
+        leading: Icon(Icons.map),
+        title: Text('Saandati'),
+      )
+    ],
+  );
+}
